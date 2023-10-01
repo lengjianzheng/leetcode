@@ -9,7 +9,7 @@ using namespace std;
 // 1, 获得值的时候  std::cout << myMap["haha"]; 会在map里插入一个键值对("haha", 0)
 int main() {
     // 1, 初始化
-    map<string, int> myMap; 
+    map<string, int> myMap;
     // 2, 插入
     myMap["abc"] = 123; 
     myMap.insert(std::make_pair<string, int>("def", 456));
