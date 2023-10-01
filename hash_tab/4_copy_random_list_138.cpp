@@ -35,7 +35,6 @@ public:
 解题思路: 难点是为random字段赋值
 1, 记录每个原节点指针对应的copy节点指针。可以通过回溯法或者遍历两遍。通过hash表来存储。给random赋值时，通过查找hash表
 2, 生成copy节点 + 拆分。random字段可以直接通过原节点的random字段找到。
-
 */
 class Solution {
 public:

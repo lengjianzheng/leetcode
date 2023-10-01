@@ -20,7 +20,6 @@ using namespace std;
 解题思路:
 1, 有序的数组，通过双指针的移动过滤错误的选项，缩小范围。
 难点: 证明过滤的选项都是不正确的。
-
 */
 class Solution {
 public:
