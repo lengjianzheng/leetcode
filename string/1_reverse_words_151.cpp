@@ -9,9 +9,15 @@
 输出："blue is sky the"
 */
 
+/*
+解决思路:
+1, 将所有的单词存入vector，反向遍历vector输出。存入vector可以直接使用istringstream, 也可以通过逻辑，选出单词，存入数组。
+istringstream 使用方式
+*/
+
 class Solution {
 public:
-    string reverseWords(string s) {
+    string reverseWords1(string s) {
         istringstream iss(s);
         string res, tmp;
         vector<string> v_str;
@@ -20,6 +26,28 @@ public:
         }
         for (int i = v_str.size() - 1; i >= 0; i--) {
             res += v_str[i] + (i == 0 ? "" : " ");
+        }
+        return res;
+    }
+
+    string reverseWords(string s) {
+        vector<string> v;
+        for (int i = 0; i < s.size();) {
+            while(i < s.size() && s[i] == ' ') {
+                i++;
+            }
+            string tmp;
+            while (i < s.size() && s[i] != ' ') {
+                tmp += string(1, s[i]);
+                i++;
+            }
+            if (tmp != "") {
+                v.push_back(tmp);
+            }
+        }
+        string res;
+        for (int i = v.size() - 1; i >= 0; i--) {
+            res += v[i] + (i == 0? "" : " ");
         }
         return res;
     }
