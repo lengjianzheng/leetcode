@@ -9,6 +9,14 @@
 输出："blue is sky the"
 */
 
+#include <unordered_map>
+#include <string>
+#include <vector>
+#include <iostream>
+#include <sstream>
+
+using namespace std;
+
 /*
 解决思路:
 1, 将所有的单词存入vector，反向遍历vector输出。存入vector可以直接使用istringstream, 也可以通过逻辑，选出单词，存入数组。
